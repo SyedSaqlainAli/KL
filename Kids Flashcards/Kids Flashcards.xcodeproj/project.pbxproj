@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		339F66281E4C61CC006C855F /* ABCFlashcardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339F66271E4C61CC006C855F /* ABCFlashcardsViewController.swift */; };
+		339F662A1E4C620D006C855F /* DrawAlphabetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339F66291E4C620D006C855F /* DrawAlphabetsViewController.swift */; };
+		339F662C1E4C623E006C855F /* WordQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339F662B1E4C623E006C855F /* WordQuizViewController.swift */; };
 		33A0D7FA1E4AFEC9005039FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A0D7F91E4AFEC9005039FD /* AppDelegate.swift */; };
 		33A0D7FF1E4AFEC9005039FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A0D7FD1E4AFEC9005039FD /* Main.storyboard */; };
 		33A0D8011E4AFEC9005039FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A0D8001E4AFEC9005039FD /* Assets.xcassets */; };
@@ -157,6 +160,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		339F66271E4C61CC006C855F /* ABCFlashcardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ABCFlashcardsViewController.swift; sourceTree = "<group>"; };
+		339F66291E4C620D006C855F /* DrawAlphabetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawAlphabetsViewController.swift; sourceTree = "<group>"; };
+		339F662B1E4C623E006C855F /* WordQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordQuizViewController.swift; sourceTree = "<group>"; };
 		33A0D7F61E4AFEC9005039FD /* Kids Flashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kids Flashcards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A0D7F91E4AFEC9005039FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33A0D7FE1E4AFEC9005039FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -319,6 +325,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		339F662D1E4C6247006C855F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				33A0D80F1E4B028A005039FD /* MenuViewController.swift */,
+				339F66271E4C61CC006C855F /* ABCFlashcardsViewController.swift */,
+				339F66291E4C620D006C855F /* DrawAlphabetsViewController.swift */,
+				339F662B1E4C623E006C855F /* WordQuizViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		33A0D7ED1E4AFEC9005039FD = {
 			isa = PBXGroup;
 			children = (
@@ -339,7 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				33A0D7F91E4AFEC9005039FD /* AppDelegate.swift */,
-				33A0D80F1E4B028A005039FD /* MenuViewController.swift */,
+				339F662D1E4C6247006C855F /* ViewController */,
 				33A0D8001E4AFEC9005039FD /* Assets.xcassets */,
 				33A0D7FD1E4AFEC9005039FD /* Main.storyboard */,
 				33A0D8021E4AFEC9005039FD /* LaunchScreen.storyboard */,
@@ -728,8 +745,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				339F662C1E4C623E006C855F /* WordQuizViewController.swift in Sources */,
 				33A0D7FA1E4AFEC9005039FD /* AppDelegate.swift in Sources */,
 				33A0D8101E4B028A005039FD /* MenuViewController.swift in Sources */,
+				339F66281E4C61CC006C855F /* ABCFlashcardsViewController.swift in Sources */,
+				339F662A1E4C620D006C855F /* DrawAlphabetsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
