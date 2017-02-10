@@ -10,6 +10,13 @@ import UIKit
 
 class WordQuizViewController: UIViewController {
 
+    
+    @IBOutlet weak var quizName: UIButton!
+    
+    var imagesRandomIteration :Int?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +33,29 @@ class WordQuizViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 
+    
+    @IBAction func readLetter(_ sender: Any) {
+        
+        
+    }
+    
+    @IBAction func imageOne(_ sender: Any) {
+        
+    }
+    
+    @IBAction func imageTwo(_ sender: Any) {
+        
+    }
+    @IBAction func imageThree(_ sender: Any) {
+    
+    }
+    
+    @IBAction func imageFour(_ sender: Any) {
+    
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 

@@ -17,9 +17,7 @@ class DrawAlphabetsViewController: UIViewController {
     @IBOutlet weak var tempImageView: UIImageView!
     
     var currentImageIndex : Int?
-    var speechSynthesizer = AVSpeechSynthesizer()
-    var speechString  : String?
-    var speechUtterance : AVSpeechUtterance?
+    
     var lastPoint : CGPoint = CGPoint.zero
     var swiped : Bool = false
     var opacity: CGFloat = 1.0
@@ -27,6 +25,10 @@ class DrawAlphabetsViewController: UIViewController {
     var red : CGFloat = 0.0
     var green : CGFloat = 0.0
     var blue : CGFloat = 0.0
+    
+    var speechSynthesizer = AVSpeechSynthesizer()
+    var speechString  : String?
+    var speechUtterance : AVSpeechUtterance?
     
     let alphabetArray : Array = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
@@ -41,7 +43,8 @@ class DrawAlphabetsViewController: UIViewController {
         
         currentImageIndex = 0
         alphabetImageView.image = UIImage(named: "draw_letter_img_\(currentImageIndex!).png")
-        speackWord(index: currentImageIndex!)
+        let string = alphabetArray[currentImageIndex!]
+        speackWord(string: string)
        
     }
     
@@ -56,7 +59,7 @@ class DrawAlphabetsViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         swiped = false
-        if let touch = touches.first! as? UITouch {
+        if let touch = touches.first  {
             lastPoint = touch.location(in: self.tempImageView)
         }
  
@@ -64,7 +67,7 @@ class DrawAlphabetsViewController: UIViewController {
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
          swiped = true
-        if let touch = touches.first! as? UITouch {
+        if let touch = touches.first  {
             let currentPoint = touch.location(in: self.tempImageView)
             drawLineFrom(fromPoint: lastPoint, toPoint: currentPoint)
             
@@ -108,12 +111,7 @@ class DrawAlphabetsViewController: UIViewController {
         
     }
     
-    
-    
-    
-    
-    
-    
+
     //MARK: IBAction methods
     
     
@@ -124,17 +122,15 @@ class DrawAlphabetsViewController: UIViewController {
    
     @IBAction func readLetter(_ sender: Any) {
         
-        speechString = alphabetArray[currentImageIndex!] as String
-        speechUtterance = AVSpeechUtterance(string: speechString!)
-        speechSynthesizer.speak(speechUtterance!)
+        let string = alphabetArray[currentImageIndex!]
+        speackWord(string: string)
     
     }
     
     @IBAction func phonicLetter(_ sender: Any) {
         
-        speechString = alphabetArray[currentImageIndex!] as String
-        speechUtterance = AVSpeechUtterance(string: speechString!)
-        speechSynthesizer.speak(speechUtterance!)
+        let string = alphabetArray[currentImageIndex!]
+        speackWord(string: string)
     }
     
     @IBAction func eraser(_ sender: Any) {
@@ -179,16 +175,7 @@ class DrawAlphabetsViewController: UIViewController {
             self.blue = 0.0
             
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+  
     }
    
     
@@ -201,15 +188,17 @@ class DrawAlphabetsViewController: UIViewController {
         currentImageIndex = currentImageIndex! + 1
         alphabetImageView.image = UIImage(named: "draw_letter_img_\(currentImageIndex!).png")
             
-            speackWord(index: currentImageIndex!)
-            print(currentImageIndex)
+            let string = alphabetArray[currentImageIndex!]
+            speackWord(string: string)
+            
         }
         else {
             tempImageView.image = nil
             currentImageIndex = 0
             alphabetImageView.image = UIImage(named: "draw_letter_img_\(currentImageIndex!).png")
-            print(currentImageIndex)
-            speackWord(index: currentImageIndex!)
+            
+            let string = alphabetArray[currentImageIndex!]
+            speackWord(string: string)
         }
         
         
@@ -220,30 +209,25 @@ class DrawAlphabetsViewController: UIViewController {
             tempImageView.image = nil
             currentImageIndex = currentImageIndex! - 1
             alphabetImageView.image = UIImage(named: "draw_letter_img_\(currentImageIndex!).png")
-            speackWord(index: currentImageIndex!)
+            let string = alphabetArray[currentImageIndex!]
+            speackWord(string: string)
+        }
+        else{
+            tempImageView.image = nil
+            currentImageIndex = 25
+            alphabetImageView.image = UIImage(named: "draw_letter_img_\(currentImageIndex!).png")
+            let string = alphabetArray[currentImageIndex!]
+            speackWord(string: string)
         }
     }
     
-    func speackWord(index : Int){
-        speechString = alphabetArray[index] as String
+    func speackWord(string : String){
+        
+       speechString = string
         speechUtterance = AVSpeechUtterance(string: speechString!)
         speechSynthesizer.speak(speechUtterance!)
     }
     
   
-    
-   
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
