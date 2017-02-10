@@ -78,7 +78,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAo-lv-iq2">
-                                        <rect key="frame" x="92" y="193" width="40.5" height="41"/>
+                                        <rect key="frame" x="90.5" y="193" width="40.5" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="EAo-lv-iq2" secondAttribute="height" multiplier="1:1" id="4Nz-G5-YQi"/>
                                         </constraints>
@@ -96,7 +96,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fc-Zn-CvS">
-                                        <rect key="frame" x="92" y="127" width="121" height="33"/>
+                                        <rect key="frame" x="90.5" y="127" width="124" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="1fc-Zn-CvS" secondAttribute="height" multiplier="15:4" id="xhh-80-phq"/>
                                         </constraints>
@@ -112,7 +112,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqf-bN-KBZ">
-                                        <rect key="frame" x="172.5" y="193" width="40.5" height="41"/>
+                                        <rect key="frame" x="174" y="193" width="40.5" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Kqf-bN-KBZ" secondAttribute="height" multiplier="1:1" id="9er-fY-dG8"/>
                                         </constraints>
@@ -307,10 +307,10 @@
                                     <action selector="colorSelector:" destination="Asi-oO-2ev" eventType="touchUpInside" id="e2g-bg-kxG"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WoY-aY-IEc">
-                                <rect key="frame" x="45.5" y="88.5" width="229" height="230"/>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WoY-aY-IEc">
+                                <rect key="frame" x="38" y="81" width="245" height="245"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="WoY-aY-IEc" secondAttribute="height" multiplier="229:230" id="APO-qv-KEP">
+                                    <constraint firstAttribute="width" secondItem="WoY-aY-IEc" secondAttribute="height" multiplier="229:230" constant="1.0652173913043441" id="APO-qv-KEP">
                                         <variation key="heightClass=regular-widthClass=regular" constant="-3.6217391304347757"/>
                                     </constraint>
                                 </constraints>
@@ -363,7 +363,7 @@
                             <constraint firstItem="aB5-5L-yJE" firstAttribute="bottom" secondItem="uVT-gg-3vT" secondAttribute="bottom" id="b7A-wC-bWi"/>
                             <constraint firstItem="OUB-wl-ANf" firstAttribute="bottom" secondItem="3cZ-v7-ivd" secondAttribute="bottom" constant="-2.5" id="cLs-oF-jaM"/>
                             <constraint firstItem="fIH-YC-ZB2" firstAttribute="height" secondItem="aB5-5L-yJE" secondAttribute="height" id="cou-87-bKT"/>
-                            <constraint firstItem="WoY-aY-IEc" firstAttribute="top" secondItem="fIH-YC-ZB2" secondAttribute="bottom" constant="28" id="d5K-IA-te1"/>
+                            <constraint firstItem="WoY-aY-IEc" firstAttribute="top" secondItem="fIH-YC-ZB2" secondAttribute="bottom" constant="21" id="d5K-IA-te1"/>
                             <constraint firstItem="aB5-5L-yJE" firstAttribute="top" secondItem="uVT-gg-3vT" secondAttribute="top" id="d8V-g3-YZs"/>
                             <constraint firstItem="fIH-YC-ZB2" firstAttribute="bottom" secondItem="aB5-5L-yJE" secondAttribute="bottom" id="dSH-3e-wYj"/>
                             <constraint firstItem="toc-ou-jJl" firstAttribute="top" secondItem="uVT-gg-3vT" secondAttribute="bottom" constant="21" id="h6P-Y1-igG">
@@ -373,7 +373,7 @@
                             <constraint firstItem="3cZ-v7-ivd" firstAttribute="top" secondItem="toc-ou-jJl" secondAttribute="bottom" constant="8" id="hon-1s-30s">
                                 <variation key="heightClass=regular-widthClass=regular" constant="18"/>
                             </constraint>
-                            <constraint firstItem="WoY-aY-IEc" firstAttribute="width" secondItem="ik3-35-Llu" secondAttribute="height" multiplier="229:480" id="iRh-ur-bbd">
+                            <constraint firstItem="WoY-aY-IEc" firstAttribute="width" secondItem="ik3-35-Llu" secondAttribute="height" multiplier="229:480" constant="16" id="iRh-ur-bbd">
                                 <variation key="heightClass=regular-widthClass=regular" constant="52.46666666666664"/>
                             </constraint>
                             <constraint firstItem="GBt-mf-U5q" firstAttribute="leading" secondItem="zaI-Ec-MXI" secondAttribute="trailing" constant="8" id="im0-HX-ReR"/>
@@ -438,7 +438,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YAP-QC-WLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2175" y="69.7265625"/>
+            <point key="canvasLocation" x="2175" y="68.75"/>
         </scene>
         <!--Word Quiz View Controller-->
         <scene sceneID="7jC-iq-AuA">
@@ -742,7 +742,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="pca-vc-W8h" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="n63-I2-rpd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n63-I2-rpd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -57,7 +57,7 @@ class DrawAlphabetsViewController: UIViewController {
         
         swiped = false
         if let touch = touches.first! as? UITouch {
-            lastPoint = touch.location(in: self.view)
+            lastPoint = touch.location(in: self.tempImageView)
         }
  
     }
@@ -65,7 +65,7 @@ class DrawAlphabetsViewController: UIViewController {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
          swiped = true
         if let touch = touches.first! as? UITouch {
-            let currentPoint = touch.location(in: self.view)
+            let currentPoint = touch.location(in: self.tempImageView)
             drawLineFrom(fromPoint: lastPoint, toPoint: currentPoint)
             
             // 7
@@ -82,8 +82,8 @@ class DrawAlphabetsViewController: UIViewController {
             drawLineFrom(fromPoint: lastPoint, toPoint: lastPoint)
         }
         
-        UIGraphicsBeginImageContext(view.frame.size)
-        tempImageView.image?.draw(in: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height), blendMode: CGBlendMode.normal, alpha: 1.0)
+        UIGraphicsBeginImageContext(tempImageView.frame.size)
+        tempImageView.image?.draw(in: CGRect(x: 0, y: 0, width: self.tempImageView.frame.size.width , height: self.tempImageView.frame.size.height), blendMode: CGBlendMode.normal, alpha: 1.0)
         tempImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -92,9 +92,9 @@ class DrawAlphabetsViewController: UIViewController {
     
     func drawLineFrom(fromPoint : CGPoint , toPoint : CGPoint) {
         
-        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIGraphicsBeginImageContext(self.tempImageView.frame.size)
         let context = UIGraphicsGetCurrentContext()
-        tempImageView.image?.draw(in: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height))
+        tempImageView.image?.draw(in: CGRect(x: 0, y: 0, width: self.tempImageView.frame.size.width , height: self.tempImageView.frame.size.height))
         context?.move(to: fromPoint)
         context?.addLine(to: toPoint)
         context?.setLineCap(CGLineCap.round)
